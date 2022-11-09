@@ -1,0 +1,106 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Japanese</title>
+    <script src="{% static 'learnJapApp/script.js' %}"></script>
+    <link href="{% static 'learnJapApp/styles.css' %}" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <span style="color: #DB4437;">L</span>earn Ja<span style="color: #4885ed;">p</span>an<span style="color:#FDCA58;">e</span>s<span style="color: #3cba54;">e</span>
+    </div>
+    <hr class="sep-line">
+    <div class="sidebar sidebar__container">
+        <div class="sidebar sidebar__option" page="Goi">Goi</div>
+        <div class="sidebar sidebar__option" page="Bunpo">Bunpo</div>
+        <div class="sidebar sidebar__option" page="Kanji">Kanji</div>
+    </div>
+
+    <div class="main-body">
+        <div class="main-body__mesg">Welcome, select something to learn from the left side navigation bar</div>
+        <!-- <div class="main-body__mesg">{{ Bunpo.content }}</div> -->
+        <div class="main-body__contnt-page">
+            <div class="level-nav-bar">
+                <div class="level-nav-bar__but level-nav-bar__but__selected" level="5">n5</div>
+                <div class="level-nav-bar__but  inner-option-button" level="4">n4</div>
+                <div class="level-nav-bar__but  inner-option-button" level="3">n3</div>
+                <div class="level-nav-bar__but  inner-option-button" level="2">n2</div>
+                <div class="level-nav-bar__but  inner-option-button" level="1">n1</div>
+            </div>
+            <hr class="sep-line-medium">
+            <div class="main-body__contnt-page__options"></div>
+            <div class="main-body__contnt-page____actual-content-container">
+                <div class="main-body__contnt-page__actual-content">
+                    <div class="main-body__contnt-page__actual-content__Content Contnt__title"></div>
+                    <hr class="sep-line-small">
+                    <div class="main-body__contnt-page__actual-content__Explanation"></div>
+                    <hr class="sep-line-small">
+                    <div class="main-body__contnt-page__actual-content__Connections"></div>
+                    <hr class="sep-line-small">
+                    <div class="main-body__contnt-page__actual-content__Examples">
+                        例文：<br>
+                    </div>
+                    <br><br>
+                    <div class="main-body__contnt-page__ExerciseBut inner-option-button">やってみよう！（練習問題）</div>
+                    <div class="main-body__contnt-page__backBut inner-option-button">戻る</div>
+                </div>
+                <div class="main-body__contnt-page__question">
+                    <div class="main-body__contnt-page__question__title">やってみよう！</div>
+                    <div style="margin-bottom: 45px; margin-top: -15px;"><hr class="sep-line-small"></div>
+                    <div class="main-body__contnt-page__question__actual-Page">
+                        <div class="main-body__contnt-page__question__actual-Page-container">
+                            <div class="link-question__questions question_box" style="display: inline-block;"></div>
+                            <div class="link-question__answers question_box" style="float:right; margin-right: 20px;"></div>
+                            <div class="multiChoice__question question_box"> </div>
+                            <div class="multiChoice__answers question_box"> </div>
+                        </div>
+                        <div class="main-body__contnt-page__question__actual-Page__submit-btn question_return-btn inner-option-button" style="margin-top:20px; font-size:20px; padding: 5px; text-align: center; min-width: none; display: inline-block; margin-left: 48%;">戻る</div>
+                        <div class="main-body__contnt-page__question__actual-Page__submit-btn submit-btn inner-option-button" style="margin-top:20px; font-size:20px; padding: 5px; text-align: center; min-width: none; display: inline-block; margin-left: 10px;">提出</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+<div class="dropdown-container" style="display: none;">
+    <div class="dropbtn-container">
+        <button class="dropbtn">Select an option</button> 
+    </div>
+    <div class="dropdown-content-container">
+        <div id="dropDownList" class="dropdown-content">
+            <a>a</a>
+            <a>b</a>
+            <a>c</a>
+            <a>d</a>
+        </div>
+    </div>
+    <div class="dropdown-content-container">
+        <div id="dropDownList" class="dropdown-content">
+            <a>a</a>
+            <a>b</a>
+            <a>c</a>
+            <a>d</a>
+        </div>
+    </div>
+</div>
+<!-- Unseen class for drop down button -->
+<!-- <div class="dropdown-container" style="display: none;">
+    <div class="dropdown">
+        <div id="myDropdown" class="dropdown-content">
+            <a onmouseover="dropdown()" onmouseleave="hideDropdown()">a</a>
+            <a onmouseover="dropdown()" onmouseleave="hideDropdown()">b</a>
+            <a onmouseover="dropdown()" onmouseleave="hideDropdown()">c</a>
+            <a onmouseover="dropdown()" onmouseleave="hideDropdown()">d</a>
+        </div>
+    </div>    
+</div> -->
+</body>
+</html>
+
+<!-- be able to swtich between displaying page and select option page -->
